@@ -37,12 +37,17 @@ public class MoveEnemy : MonoBehaviour {
         }
 	}
 	
-	void Update () {
+	void FixedUpdate () {
+        Patrol();
+	}
+
+    void Patrol()
+    {
         fraction = currentDist / totalDist;
         transform.position = Vector3.Lerp(firstPosition, secondPosition, fraction);
         if (forward)
         {
-            currentDist += Time.deltaTime*speed;
+            currentDist += Time.deltaTime * speed;
             if (currentDist > totalDist)
             {
                 forward = false;
@@ -51,12 +56,12 @@ public class MoveEnemy : MonoBehaviour {
         }
         else
         {
-            currentDist -= Time.deltaTime*speed;
+            currentDist -= Time.deltaTime * speed;
             if (currentDist < 0.0f)
             {
                 forward = true;
                 currentDist = 0.0f;
             }
         }
-	}
+    }
 }

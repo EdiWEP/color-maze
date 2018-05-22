@@ -72,6 +72,8 @@ GameObject:
   - component: {fileID: 4227707794106132}
   - component: {fileID: 135900700569004822}
   - component: {fileID: 114297335428127572}
+  - component: {fileID: 114857802531803924}
+  - component: {fileID: 114218664424196360}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -206,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1310756127042804}
   m_LocalRotation: {x: 0.35355338, y: -0.1464466, z: 0.35355338, w: 0.8535535}
-  m_LocalPosition: {x: -0.49, y: 0.7, z: 3.21}
+  m_LocalPosition: {x: 0, y: 0.7, z: 5.92}
   m_LocalScale: {x: 0.37, y: 0.37, z: 0.37}
   m_Children:
   - {fileID: 4156031431712492}
@@ -552,6 +554,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619989329371602}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114218664424196360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310756127042804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585a1a9a267d0f847a9a781ab5016ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
 --- !u!114 &114297335428127572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,7 +577,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ba97d1846d41b45a7527789ee9edee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 7
+--- !u!114 &114857802531803924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310756127042804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c243b79a209125b4083246b86995c1cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  startRightForward: 1
+  xAxis: 1
+  firstDistance: {x: -5, y: 0, z: 0}
+  secondDistance: {x: 5, y: 0, z: 0}
 --- !u!135 &135900700569004822
 SphereCollider:
   m_ObjectHideFlags: 1

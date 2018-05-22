@@ -14,11 +14,12 @@ public class PlayerMovement : MonoBehaviour {
 
     private int score = 0;
     private Material playerMaterial;
-    //private Rigidbody playerRB;
+    private Rigidbody playerRB;
     Vector3 horizontal, vertical, movement;
 
 	void Start () {
-        //playerRB = GetComponent<Rigidbody>();
+        playerRB = GetComponent<Rigidbody>();
+
         vertical = Camera.main.transform.forward;
         vertical.y = 0.0f;
         vertical.Normalize();
@@ -36,22 +37,21 @@ public class PlayerMovement : MonoBehaviour {
 
     void Move() {
 
-        Vector3 moveHorizontal = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime * horizontal;
-        Vector3 moveVertical = Input.GetAxisRaw("Vertical") * speed * Time.deltaTime * vertical;
-
-        transform.position += moveHorizontal + moveVertical;
-        if(Input.GetButton("Horizontal") && Input.GetButton("Vertical"))
-        {
-            transform.position -= (moveHorizontal + moveVertical) * 0.3f;
-        }
+        Vector3 moveHorizontal = Input.GetAxisRaw("Horizontal") * horizontal;
+        Vector3 moveVertical = Input.GetAxisRaw("Vertical") * vertical;
+        movement = moveHorizontal + moveVertical;
+        movement = movement.normalized * speed * Time.deltaTime;
+        
+        playerRB.AddForce(movement * 300);
+        
     }
 
     void OnTriggerEnter(Collider col) {
 
         if(col.CompareTag("Coin"))
         {
-            score += 100;
-            scoreText.text = "Score: " + score.ToString();
+            UpdateScore();
+
             AudioSource.PlayClipAtPoint(gotCoin, transform.position);
 
             Destroy(col.gameObject);
@@ -60,38 +60,61 @@ public class PlayerMovement : MonoBehaviour {
         if(col.CompareTag("Color Pill"))
         {
             playerColor = col.gameObject.GetComponent<PillColor>().color;
-            
-            switch (playerColor)
-            {
-                case ColorEnum.ColorX.red:
-                    playerMaterial.SetColor("_Color", Color.red);
-                    break;
-                case ColorEnum.ColorX.green:
-                    playerMaterial.SetColor("_Color", Color.green);
-                    break;
-                case ColorEnum.ColorX.blue:
-                    playerMaterial.SetColor("_Color", Color.blue);
-                    break;
-                case ColorEnum.ColorX.pink:
-                    playerMaterial.SetColor("_Color", Color.magenta);
-                    break;
-                case ColorEnum.ColorX.yellow:
-                    playerMaterial.SetColor("_Color", Color.yellow);
-                    break;
-                case ColorEnum.ColorX.cyan:
-                    playerMaterial.SetColor("_Color", Color.cyan);
-                    break;
-                default:
-                    break;
-            }
+            ChangeColor();
 
             AudioSource.PlayClipAtPoint(changedColor, transform.position);
+
             Destroy(col.gameObject);
         }
 
         if(col.CompareTag("Enemy"))
         {
-            
+            Die();
         }
+    }
+
+    void ChangeColor()
+    {
+        switch (playerColor)
+        {
+            case ColorEnum.ColorX.red:
+                playerMaterial.SetColor("_Color", Color.red);
+                break;
+            case ColorEnum.ColorX.green:
+                playerMaterial.SetColor("_Color", Color.green);
+                break;
+            case ColorEnum.ColorX.blue:
+                playerMaterial.SetColor("_Color", Color.blue);
+                break;
+            case ColorEnum.ColorX.pink:
+                playerMaterial.SetColor("_Color", Color.magenta);
+                break;
+            case ColorEnum.ColorX.yellow:
+                playerMaterial.SetColor("_Color", Color.yellow);
+                break;
+            case ColorEnum.ColorX.cyan:
+                playerMaterial.SetColor("_Color", Color.cyan);
+                break;
+            default:
+                break;
+        }
+    }
+    
+    void UpdateScore()
+    {
+        score += 100;
+        GameManager.score += 100;
+        scoreText.text = "Score: " + GameManager.score.ToString();
+    }
+
+    void Die()
+    {
+        GameManager.score -= score;
+        GameManager.RestartLevel();
+    }
+
+    void OnCollisionEnter()
+    {
+        playerRB.velocity = Vector3.zero;
     }
 }
