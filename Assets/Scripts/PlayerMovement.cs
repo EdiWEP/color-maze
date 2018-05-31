@@ -9,16 +9,19 @@ public class PlayerMovement : MonoBehaviour {
     public float speed;
     public ColorX playerColor;
     public Text scoreText;
-    public AudioClip gotCoin;
-    public AudioClip changedColor;
+    public AudioClip gotCoin, changedColor, gunColorChange;
 
+    private int groundMask;
     private int score = 0;
+    private GunColor gunColor;
     private Material playerMaterial;
     private Rigidbody playerRB;
     Vector3 horizontal, vertical, movement;
 
 	void Start () {
+        groundMask = LayerMask.GetMask("Floor");
         playerRB = GetComponent<Rigidbody>();
+        gunColor = GetComponentInChildren<GunColor>();
 
         vertical = Camera.main.transform.forward;
         vertical.y = 0.0f;
@@ -33,6 +36,8 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical")) {
             Move();
         }
+
+        Turn();
 	}
 
     void Move() {
@@ -44,6 +49,20 @@ public class PlayerMovement : MonoBehaviour {
         
         playerRB.AddForce(movement * 300);
         
+    }
+
+    void Turn()
+    {
+        Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit groundHit;
+
+        if (Physics.Raycast(cameraRay, out groundHit, 100f, groundMask))
+        {
+            Vector3 playerToMouse = groundHit.point - transform.position;
+            playerToMouse.y = 0.0f;
+            Quaternion rotation = Quaternion.LookRotation(playerToMouse);
+            playerRB.MoveRotation(rotation);
+        }
     }
 
     void OnTriggerEnter(Collider col) {
@@ -70,6 +89,15 @@ public class PlayerMovement : MonoBehaviour {
         if(col.CompareTag("Enemy"))
         {
             Die();
+        }
+
+        if(col.CompareTag("Gun Pill"))
+        {
+            gunColor.ChangeColor(col.gameObject.GetComponent<GunPillColor>().color);
+
+            AudioSource.PlayClipAtPoint(gunColorChange, transform.position);
+
+            Destroy(col.gameObject);
         }
     }
 

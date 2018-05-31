@@ -7,6 +7,11 @@ TagManager:
   - Coin
   - Color Pill
   - Enemy
+  - Gun Pill
+  - Wall
+  - End Point
+  - Contact Block
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Floor
   - 
   - 
   - 

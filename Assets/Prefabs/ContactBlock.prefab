@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 65491773885826192}
   - component: {fileID: 114399093772106702}
   - component: {fileID: 111163883293336932}
+  - component: {fileID: 114008354798999736}
   m_Layer: 0
   m_Name: ContactBlock
-  m_TagString: Untagged
+  m_TagString: Contact Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +114,17 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114008354798999736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1173641060249512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0d1276b4e027646a6b96ce19f30340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114399093772106702
 MonoBehaviour:
   m_ObjectHideFlags: 1

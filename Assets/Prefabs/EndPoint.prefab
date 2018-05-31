@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114420683889431436}
   m_Layer: 0
   m_Name: EndPoint
-  m_TagString: Untagged
+  m_TagString: End Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,4 +121,4 @@ CapsuleCollider:
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 5, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 2.5, z: -0.00000008940697}

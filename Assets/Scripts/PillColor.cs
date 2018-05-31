@@ -43,8 +43,4 @@ public class PillColor : MonoBehaviour {
         }
     }
 	
-	
-	void Update () {
-		
-	}
 }

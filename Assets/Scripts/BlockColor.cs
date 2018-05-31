@@ -8,11 +8,9 @@ public class BlockColor : MonoBehaviour {
     public ColorX color;
 
     private Material blockMaterial;
-    private Animation fadeAnimation;
 
 	void Start () {
 
-        fadeAnimation = GetComponent<Animation>();
 
         blockMaterial = GetComponent<Renderer>().material;
         switch (color)
@@ -45,16 +43,4 @@ public class BlockColor : MonoBehaviour {
         }
     }
 	
-    void OnCollisionEnter(Collision col) {
-        if(col.gameObject.CompareTag("Player"))
-        {
-            ColorX playerColor = col.gameObject.GetComponent<PlayerMovement>().playerColor;
-            if (playerColor == color)
-            {
-                fadeAnimation.Play();
-                float t = fadeAnimation.clip.length;
-                Destroy(gameObject, t);
-            }
-        }
-    } 
 }
