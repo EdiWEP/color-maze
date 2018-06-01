@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         score += 100;
         GameManager.score += 100;
-        scoreText.text = "Score: " + GameManager.score.ToString();
+        scoreText.text = "Scor: " + GameManager.score.ToString();
     }
 
     void Die()

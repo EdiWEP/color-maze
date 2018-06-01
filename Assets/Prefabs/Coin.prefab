@@ -107,7 +107,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4282892995
-  m_Size: 0.67
+  m_Size: 0.7
 --- !u!136 &136903843704966468
 CapsuleCollider:
   m_ObjectHideFlags: 1

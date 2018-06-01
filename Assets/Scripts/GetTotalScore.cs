@@ -9,7 +9,7 @@ public class GetTotalScore : MonoBehaviour {
 
 	void Start () {
         scoreText = GetComponent<Text>();
-        scoreText.text = "Score: " + GameManager.score.ToString();
+        scoreText.text = "Scor: " + GameManager.score.ToString();
 	}
 	
 }
