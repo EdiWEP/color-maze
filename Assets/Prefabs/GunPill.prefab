@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424f8f3119f05e94f95635edc4f3064d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: 1
+  color: 7
   cube1Renderer: {fileID: 23825651877701684}
   cube2Renderer: {fileID: 23342403446043104}
 --- !u!114 &114806819026568578

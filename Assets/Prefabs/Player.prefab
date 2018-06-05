@@ -218,6 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1772520516099736, guid: 95c4474553962604f803b73bb7bad7b4, type: 2}
   gunEnd: {fileID: 4473597298425290}
+  gunSound: {fileID: 8300000, guid: 20a9913fe3d5e7c4084484eb626cf5f6, type: 3}
 --- !u!114 &114625362282198020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -242,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1187bf92b79990e40a39e01e3d47f932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4.5
   playerColor: 5
   scoreText: {fileID: 0}
   gotCoin: {fileID: 8300000, guid: 625f22bf469a6ac4aa61db90057460ad, type: 3}
