@@ -71,7 +71,7 @@ Transform:
   - {fileID: 4645543784334738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 45.000004, z: 0}
 --- !u!20 &20248869171353992
 Camera:
   m_ObjectHideFlags: 1
@@ -81,7 +81,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.827451, g: 0.827451, b: 0.827451, a: 0}
+  m_BackGroundColor: {r: 0.88235295, g: 0.88235295, b: 0.88235295, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

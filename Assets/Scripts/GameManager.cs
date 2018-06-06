@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
     
     public void ExitToMenu()
     {
+        score = 0;
         SceneManager.LoadScene(0);
     }
 
