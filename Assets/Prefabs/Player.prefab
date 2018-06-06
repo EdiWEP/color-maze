@@ -199,7 +199,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 4
-  m_AngularDrag: 200
+  m_AngularDrag: 0.1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -245,7 +245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4.5
   playerColor: 5
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 114179708172203042, guid: 0882af5a513ec3d4a869242a1db036a8,
+    type: 2}
   gotCoin: {fileID: 8300000, guid: 625f22bf469a6ac4aa61db90057460ad, type: 3}
   changedColor: {fileID: 8300000, guid: 159ce54f9e9c4904c9c53c2f72ebcc8c, type: 3}
   gunColorChange: {fileID: 8300000, guid: 6105d7d805df0cc42aa85b339fb317ca, type: 3}

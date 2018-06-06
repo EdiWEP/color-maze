@@ -135,14 +135,10 @@ public class PlayerMovement : MonoBehaviour {
         scoreText.text = "Scor: " + GameManager.score.ToString();
     }
 
-    void Die()
+    public void Die()
     {
         GameManager.score -= score;
         GameManager.RestartLevel();
     }
 
-    void OnCollisionEnter()
-    {
-        playerRB.velocity = Vector3.zero;
-    }
 }

@@ -700,7 +700,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4129209058850914, guid: 6cc0fe433365cd048b2ff2755af8ac6c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.15000004
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4129209058850914, guid: 6cc0fe433365cd048b2ff2755af8ac6c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -847,7 +847,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 429996709}
+      objectReference: {fileID: 1477417238}
     - target: {fileID: 114369974590292248, guid: 0882af5a513ec3d4a869242a1db036a8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -882,6 +882,21 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 429996709}
+    - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RestartLevelFromMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0882af5a513ec3d4a869242a1db036a8, type: 2}
@@ -2027,6 +2042,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be1e8a68854d5dd4d9ea126a844b7d7f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1477417238 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114921844549557662, guid: be1e8a68854d5dd4d9ea126a844b7d7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1477417237}
+  m_Script: {fileID: 11500000, guid: 1187bf92b79990e40a39e01e3d47f932, type: 3}
 --- !u!4 &1486029651 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4239461542167984, guid: c9f4fde119b0e2840bf50e44cebe0294,
@@ -2750,7 +2771,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4129209058850914, guid: 6cc0fe433365cd048b2ff2755af8ac6c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.15000004
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4129209058850914, guid: 6cc0fe433365cd048b2ff2755af8ac6c, type: 2}
       propertyPath: m_LocalPosition.z
