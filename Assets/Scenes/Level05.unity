@@ -5283,11 +5283,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114369974590292248, guid: 0882af5a513ec3d4a869242a1db036a8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1255272387}
     - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5295,48 +5290,17 @@ Prefab:
       objectReference: {fileID: 428185691}
     - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1255272387}
-    - target: {fileID: 114369974590292248, guid: 0882af5a513ec3d4a869242a1db036a8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 436705132}
-    - target: {fileID: 114369974590292248, guid: 0882af5a513ec3d4a869242a1db036a8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ExitToMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 114369974590292248, guid: 0882af5a513ec3d4a869242a1db036a8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ManagePause
-      objectReference: {fileID: 0}
-    - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
-        type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 436705132}
-    - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
+    - target: {fileID: 114369974590292248, guid: 0882af5a513ec3d4a869242a1db036a8,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: RestartLevelFromMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 114445130679014524, guid: 0882af5a513ec3d4a869242a1db036a8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ManagePause
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 436705132}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0882af5a513ec3d4a869242a1db036a8, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1255272387 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114287044518292750, guid: 0882af5a513ec3d4a869242a1db036a8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1255272386}
-  m_Script: {fileID: 11500000, guid: bef357ee0e6989848ac0fae62aa7f518, type: 3}
 --- !u!1001 &1260696574
 Prefab:
   m_ObjectHideFlags: 0

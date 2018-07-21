@@ -10,9 +10,9 @@ public class PlayerMovement : MonoBehaviour {
     public ColorX playerColor;
     public Text scoreText;
     public AudioClip gotCoin, changedColor, gunColorChange;
+    public int score = 0;
 
     private int groundMask;
-    private int score = 0;
     private GunColor gunColor;
     private Material playerMaterial;
     private Rigidbody playerRB;
@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         score += 100;
         GameManager.score += 100;
-        scoreText.text = "Scor: " + GameManager.score.ToString();
+        scoreText.text = "Score: " + GameManager.score.ToString();
     }
 
     public void Die()
