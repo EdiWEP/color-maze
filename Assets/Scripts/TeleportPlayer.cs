@@ -14,7 +14,7 @@ public class TeleportPlayer : MonoBehaviour {
     
     void Awake ()
     {
-        delay = 2.5f;
+        delay = 1.0f;
     }
 
 	void Start () {
@@ -26,7 +26,7 @@ public class TeleportPlayer : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col)
     {
-        if(col.CompareTag("Player") && delay == 2.5f)
+        if(col.CompareTag("Player") && delay == 1.0f)
         {
             if (col.GetComponent<PlayerMovement>().playerColor == teleporterColor)
             {
@@ -38,13 +38,13 @@ public class TeleportPlayer : MonoBehaviour {
 
     void Update ()
     {
-        if (delay < 2.5f)
+        if (delay < 1.0f)
         {
             delay += (Time.deltaTime / numberOfTeleporters);
         }
-        if (delay > 2.5f)
+        if (delay > 1.0f)
         {
-            delay = 2.5f;
+            delay = 1.0f;
         }
     }
 }
