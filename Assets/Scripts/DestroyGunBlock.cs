@@ -29,6 +29,10 @@ public class DestroyGunBlock : MonoBehaviour {
                 Destroy(gameObject,0.8f);
                 Destroy(explosionInstance, 1.25f);
             }
+            else
+            {
+                Destroy(col.gameObject);
+            }
         }
     }
 }
