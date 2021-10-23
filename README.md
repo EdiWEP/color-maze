@@ -1,5 +1,5 @@
 <h1 align="center">Color Maze</h1>
-									<p align="right">Proiect realizat de Eduard-Cristian Podaru</p>
+								
 </br></br>
 <img src="https://i.imgur.com/rtJenKP.png"></img>
 <h2>Descriere</h2>
